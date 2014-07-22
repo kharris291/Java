@@ -1,0 +1,60 @@
+package com.assignment;
+
+import java.awt.*;
+
+import javax.swing.*;
+ 
+
+public class LunchBox extends JFrame {
+
+	LunchBox(){
+		super("Lunch Menu");
+		
+		setSize(300,300);
+		setLocation(100,100);
+		
+		setContentPane(createContent());
+		setVisible(true);
+	}
+
+	private JPanel createContent() {
+		// TODO Auto-generated method stub
+		JPanel Main = new JPanel(new BorderLayout());
+		JPanel pane = new JPanel(new GridLayout(1,2));
+		//for the titles
+		JPanel Text= new JPanel(new GridLayout(6,1));
+		JLabel Food = new JLabel("Type");
+		JLabel Food1 = new JLabel("Toasted");
+		JLabel Food2 = new JLabel("filling 1");
+		JLabel Food3 = new JLabel("filling 2");
+		JLabel Food4 = new JLabel("sauce");
+		JLabel Food5 = new JLabel("drink");
+		 
+		Text.add(Food);
+		Text.add(Food1);
+		Text.add(Food2);
+		Text.add(Food3);
+		Text.add(Food4);
+		Text.add(Food5);
+		pane.add(Text, BorderLayout.NORTH);
+		//for the lunch options
+		JPanel LunchInfo = new JPanel(new GridLayout(6,1));
+		JTextArea lol = new JTextArea();
+		JTextArea lol1 = new JTextArea();
+		JTextArea lol2 = new JTextArea();
+		JTextArea lol3 = new JTextArea();
+		JTextArea lol4 = new JTextArea();
+		JTextArea lol5 = new JTextArea();
+		LunchInfo.add(lol);
+		LunchInfo.add(lol1);
+		LunchInfo.add(lol2);
+		LunchInfo.add(lol3);
+		LunchInfo.add(lol4);
+		LunchInfo.add(lol5);
+		
+		
+		pane.add(LunchInfo, BorderLayout.CENTER);
+		
+		return pane;
+	}
+}

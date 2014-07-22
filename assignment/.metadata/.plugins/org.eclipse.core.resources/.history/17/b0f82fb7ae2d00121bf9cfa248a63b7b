@@ -1,0 +1,97 @@
+package com.assignment;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+public class LunchBox extends JFrame {
+
+	LunchBox() {
+		super("Lunch Menu");
+
+		setSize(300, 300);
+		setLocation(100, 100);
+
+		setContentPane(createContent());
+		setVisible(true);
+	}
+
+	private JPanel createContent() {
+		// TODO Auto-generated method stub
+		JPanel Main = new JPanel(new BorderLayout());
+		//for the titles
+		JPanel Type = new JPanel(new GridLayout(1, 3));
+
+		JLabel Food = new JLabel("Type");
+		JLabel Options = new JLabel("Options");
+		
+		
+		Type.add(Food);
+		Type.add(Options);
+		
+		
+		//panel for the center information
+		JPanel pane = new JPanel(new GridLayout(1, 3));
+		// for the titles
+		JPanel Text = new JPanel(new GridLayout(5, 1));
+
+		JLabel Food1 = new JLabel("Toasted");
+		JLabel Food2 = new JLabel("filling 1");
+		JLabel Food3 = new JLabel("filling 2");
+		JLabel Food4 = new JLabel("sauce");
+		JLabel Food5 = new JLabel("drink");
+
+		Text.add(Food1);
+		Text.add(Food2);
+		Text.add(Food3);
+		Text.add(Food4);
+		Text.add(Food5);
+		pane.add(Text, BorderLayout.NORTH);
+		// for the lunch options
+		JPanel LunchInfo = new JPanel(new GridLayout(5, 1));
+		JLabel Option1 = new JLabel();
+		JLabel Option2 = new JLabel();
+		JLabel Option3 = new JLabel();
+		JLabel Option4 = new JLabel();
+		JLabel Option5 = new JLabel();
+		
+		LunchInfo.add(Option1);
+		LunchInfo.add(Option2);
+		LunchInfo.add(Option3);
+		LunchInfo.add(Option4);
+		LunchInfo.add(Option5);
+		
+
+		pane.add(LunchInfo, BorderLayout.CENTER);
+		//for calorie information
+		JPanel CalInfo = new JPanel(new GridLayout(5,1));
+		
+		JLabel CalCount1 = new JLabel();
+		JLabel CalCount2 = new JLabel();
+		JLabel CalCount3 = new JLabel();
+		JLabel CalCount4 = new JLabel();
+		JLabel CalCount5 = new JLabel();
+		
+		CalInfo.add(CalCount1);
+		CalInfo.add(CalCount2);
+		CalInfo.add(CalCount3);
+		CalInfo.add(CalCount4);
+		CalInfo.add(CalCount5);
+		
+		pane.add(CalInfo);
+		
+		//for final information
+		JPanel Information = new JPanel(new GridLayout(1,2));
+		
+		JLabel Calories = new JLabel("Calories");
+		JLabel Count = new JLabel();
+		
+		Information.add(Calories);
+		Information.add(Count);
+		
+		Main.add(Type, BorderLayout.NORTH);
+		Main.add(pane, BorderLayout.CENTER);
+		Main.add(Information, BorderLayout.SOUTH);
+		return Main;
+	}
+}

@@ -1,0 +1,31 @@
+package com.assignment;
+
+import java.awt.*;
+
+import javax.swing.*;
+ 
+
+public class LunchBox extends JFrame {
+
+	LunchBox(){
+		super("Lunch Menu");
+		
+		setSize(300,400);
+		setLocation(100,100);
+		
+		setContentPane(createContent());
+		setVisible(true);
+	}
+
+	private JPanel createContent() {
+		// TODO Auto-generated method stub
+		JPanel pane = new JPanel(new BorderLayout());
+		
+		JPanel LunchInfo = new JPanel(new GridLayout(1,6));
+		JComboBox lol = new JComboBox();
+		
+		pane.add(LunchInfo, BorderLayout.CENTER);
+		
+		return pane;
+	}
+}

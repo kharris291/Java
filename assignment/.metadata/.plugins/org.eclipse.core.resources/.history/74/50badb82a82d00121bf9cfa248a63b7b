@@ -1,0 +1,49 @@
+package com.assignment;
+
+import java.awt.*;
+
+import javax.swing.*;
+ 
+
+public class LunchBox extends JFrame {
+
+	LunchBox(){
+		super("Lunch Menu");
+		
+		setSize(300,400);
+		setLocation(100,100);
+		
+		setContentPane(createContent());
+		setVisible(true);
+	}
+
+	private JPanel createContent() {
+		// TODO Auto-generated method stub
+		JPanel pane = new JPanel(new BorderLayout());
+		//for the titles
+		JPanel Text= new JPanel(new GridLayout(1,6));
+		JLabel Food = new JLabel("Type");
+		JLabel Food1 = new JLabel("Toasted");
+		JLabel Food2 = new JLabel("filling 1");
+		JLabel Food3 = new JLabel("filling 2");
+		JLabel Food4 = new JLabel("sauce");
+		JLabel Food5 = new JLabel("drink");
+		 
+		Text.add(Food);
+		Text.add(Food1);
+		Text.add(Food2);
+		Text.add(Food3);
+		Text.add(Food4);
+		Text.add(Food5);
+		
+		//for the lunch options
+		JPanel LunchInfo = new JPanel(new GridLayout(1,6));
+		JComboBox lol = new JComboBox();
+		
+		LunchInfo.add(lol);
+		
+		pane.add(LunchInfo, BorderLayout.CENTER);
+		
+		return pane;
+	}
+}

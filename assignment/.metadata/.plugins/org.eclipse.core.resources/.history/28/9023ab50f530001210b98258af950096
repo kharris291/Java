@@ -1,0 +1,91 @@
+/************************************************************/
+/****				Name - Kevin Harris			    	*****/
+/****				SID	 - C09515259			 		*****/
+/****		Summary - makes the total calorie count		*****/
+/****		   											*****/
+/****		   											*****/
+/************************************************************/
+
+package com.assignment;
+
+import java.awt.event.ActionEvent;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class countCals {
+	String drink[] = { "7up", "coke", "pepsi", "water", "fanta" };
+	String drinkcals[] = { "102", "97", "210", "0", "75" };
+
+	String bread[] = { "White", "Brown", "Roll", "Half/Half", "pitta" };
+	String breadcals[] = { "125", "134", "216", "152", "124" };
+
+	String filling[] = { "Ham", "Cheese", "Egg", "Chicken", "Jam" };
+	String fillingcals[] = { "60", "450", "650", "0", "500" };
+
+	String fruit[] = { "Orange", "Apple", "banana", "Pear", "kiwi" };
+	String fruitcals[] = { "300", "150", "250", "50", "150" };
+
+	String snack[] = { "Snack", "Kitkat", "Tayto", "Chomp", "Crunchy" };
+	String snackcals[] = { "400", "600", "540", "600", "1000" };
+
+	int drint, brint, fiint, frint, snint;
+
+	public String countCals(int count, int drcheck, int brcheck, int ficheck,
+			int frcheck, int sncheck) {
+		// TODO Auto-generated constructor stub
+		String content;
+
+		int countdrint = 0, countbrint = 0, countfiint = 0, countfrint = 0, countsnint = 0;
+		if (drcheck == 0) {
+
+			drint = Integer.parseInt(drinkcals[count]);
+			countsnint = count;
+
+		} else {
+			drint = Integer.parseInt(drinkcals[countsnint]);
+
+		}
+		if (brcheck == 0) {
+			brint = Integer.parseInt(breadcals[count]);
+			countbrint = count;
+		} else {
+			brint = Integer.parseInt(breadcals[countbrint]);
+		}
+
+		if (ficheck == 0) {
+			fiint = Integer.parseInt(fillingcals[count]);
+			countfiint = count;
+		} else {
+			fiint = Integer.parseInt(fillingcals[countfiint]);
+		}
+
+		if (frcheck == 0) {
+			frint = Integer.parseInt(fruitcals[count]);
+			countfrint = count;
+		} else {
+			frint = Integer.parseInt(fruitcals[countfrint]);
+		}
+
+		if (sncheck == 0) {
+
+			snint = Integer.parseInt(snackcals[count]);
+			countsnint = count;
+		} else {
+			snint = Integer.parseInt(snackcals[countsnint]);
+		}
+
+		int total = 0;
+		int finaltot;
+		if((drcheck &brcheck&ficheck&frcheck&sncheck)==1){
+			total=finaltot;
+		}
+		else{
+			total = total + drint + brint + fiint + frint + snint;
+			finaltot=total;
+		}
+		
+		return content = String.format("%d", total);
+
+	}
+}
