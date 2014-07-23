@@ -1,10 +1,6 @@
 Java
 ====
 
-GUI assignment.
-Name – Kevin Harris
-Student id – C09515259
-
 How to run.
 
 You have to import the project into eclipse and go to the control class. From there you have to click the run button to initiate the program. To display the first set of values click the "Choose orders" button. If the set of items that come up are not acceptable then click the "Select a different set" button. If items seem appealing then make sure then click the checkbox beside the item. Right click in the window to get a popup menu.The options that will appear are help, total calories and exit. Once all items are clicked then order is complete and both buttoms will be unclickable.
